@@ -251,6 +251,13 @@ const questoes = [
     }
 ];
 
+function embaralharArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 let indiceAtual = 0;
 
 function carregarQuestao() {
@@ -279,5 +286,7 @@ function verificar(escolhida, btn) {
         btn.className = 'btn-opcao errado';
     }
 }
+
+embaralharArray(questoes);
 
 carregarQuestao();
