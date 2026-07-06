@@ -1,67 +1,76 @@
-/* Adicione isso no topo do seu CSS */
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a;
+    background-color: rgb(8, 6, 22);
     color: #e2e8f0;
-    
-    /* Configurações para garantir centralização total */
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza verticalmente */
-    min-height: 100vh;   /* Garante que o body ocupe a altura total da tela */
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    padding: 10px;       /* Um pouco de margem para não encostar nas bordas no celular */
+    padding: 10px;
 }
 
 .container {
-    max-width: 500px;
     width: 100%;
     text-align: center;
-    background-color: #1e293b;
-    padding: 20px;       /* Ajustado para caber melhor no mobile */
+    background-color: rgb(26, 25, 83);
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(47, 47, 228, 0.2);
+    /* O padding muda conforme a tela abaixo */
+    padding: 30px; 
 }
 
-/* O resto do seu CSS permanece igual */
 #pergunta {
-    font-size: 1.2em; /* Diminuí um pouquinho para não quebrar linhas em telas muito pequenas */
-    margin-bottom: 25px;
     font-weight: 600;
-    color: #94a3b8;
+    color: #ffffff;
+    margin-bottom: 25px;
 }
 
 .btn-opcao {
     display: block;
     width: 100%;
-    padding: 15px;
     margin: 12px 0;
-    border: 1px solid #334155;
+    border: 1px solid rgb(47, 47, 228);
     border-radius: 10px;
     cursor: pointer;
-    font-size: 1em;
-    background-color: #334155;
-    color: #f1f5f9;
-    transition: all 0.2s ease;
+    background-color: rgb(22, 46, 147);
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 .btn-opcao:hover {
-    background-color: #475569;
-    border-color: #60a5fa;
+    background-color: rgb(47, 47, 228);
+    box-shadow: 0 0 15px rgba(47, 47, 228, 0.4);
 }
 
-.correto {
-    background-color: #059669 !important;
-    border-color: #10b981 !important;
-    color: white;
+/* --- AJUSTES RESPONSIVOS --- */
+
+/* 1. CELULAR (Telas pequenas) */
+@media (max-width: 480px) {
+    .container { padding: 15px; }
+    #pergunta { font-size: 1.1em; }
+    .btn-opcao { padding: 12px; font-size: 0.9em; }
 }
 
-.errado {
-    background-color: #be123c !important;
-    border-color: #e11d48 !important;
-    color: white;
+/* 2. NOTEBOOK (Telas médias) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container { max-width: 450px; padding: 25px; }
+    #pergunta { font-size: 1.2em; }
+    .btn-opcao { padding: 14px; font-size: 1em; }
 }
+
+/* 3. PC / DESKTOP (Telas grandes) */
+@media (min-width: 1025px) {
+    .container { max-width: 600px; padding: 40px; }
+    #pergunta { font-size: 1.5em; }
+    .btn-opcao { padding: 18px; font-size: 1.1em; }
+}
+
+/* ESTADOS DE ACERTO/ERRO */
+.correto { background-color: #059669 !important; border-color: #10b981 !important; }
+.errado { background-color: #be123c !important; border-color: #e11d48 !important; }
