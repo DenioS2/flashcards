@@ -1,0 +1,67 @@
+/* Adicione isso no topo do seu CSS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    
+    /* Configurações para garantir centralização total */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh;   /* Garante que o body ocupe a altura total da tela */
+    margin: 0;
+    padding: 10px;       /* Um pouco de margem para não encostar nas bordas no celular */
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    background-color: #1e293b;
+    padding: 20px;       /* Ajustado para caber melhor no mobile */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* O resto do seu CSS permanece igual */
+#pergunta {
+    font-size: 1.2em; /* Diminuí um pouquinho para não quebrar linhas em telas muito pequenas */
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.btn-opcao {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: #334155;
+    color: #f1f5f9;
+    transition: all 0.2s ease;
+}
+
+.btn-opcao:hover {
+    background-color: #475569;
+    border-color: #60a5fa;
+}
+
+.correto {
+    background-color: #059669 !important;
+    border-color: #10b981 !important;
+    color: white;
+}
+
+.errado {
+    background-color: #be123c !important;
+    border-color: #e11d48 !important;
+    color: white;
+}
