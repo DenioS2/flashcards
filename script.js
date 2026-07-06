@@ -2,7 +2,7 @@ const questoes = [
     {
         pergunta: "Qual o operador utilizado para acessar campos de uma struct?",
         opcoes: ["->", ".", "*"],
-        correta: 1 // Índice do array (ponto)
+        correta: 1 
     },
     {
         pergunta: "O que o princípio LIFO (Pilha) significa?",
